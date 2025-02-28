@@ -1,0 +1,21 @@
+#include <iostream>
+#include <stack>
+#include <cctype>
+using namespace std;
+
+#define MAX 100
+
+class Stack {
+private:
+    char arr[MAX];
+    int top;
+public:
+    Stack() { top = -1; }
+
+    void push(char value) {
+        if (top >= MAX - 1) return;
+        arr[++top] = value;
+    }
+
+    char pop() {
+        if (top == -1) return '
